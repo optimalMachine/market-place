@@ -5,14 +5,14 @@ import { FaDelicious, FaShoppingCart, FaWallet, FaChartLine, FaRegClock, FaCog, 
 
 function Menu() {
 
-  useEffect(()=>{
-    const mainMenuLi = document.getElementById('mainmenu').querySelectorAll('li');
-    const changeActive = () => {
-      mainMenuLi.forEach(n=>n.classList.remove('active'))
-      this.classList.add('active');
-    };
-    mainMenuLi.forEach(n=>n.addEventListener('click', changeActive));
-  },[]);
+  // useEffect(()=>{
+  //   const mainMenuLi = document.getElementById('mainmenu').querySelectorAll('li');
+  //   const changeActive = () => {
+  //     mainMenuLi.forEach(n=>n.classList.remove('active'))
+  //     this.classList.add('active');
+  //   };
+  //   mainMenuLi.forEach(n=>n.addEventListener('click', changeActive));
+  // },[]);
 
   return (
     <div className="menu">

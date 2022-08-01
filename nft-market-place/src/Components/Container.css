@@ -54,5 +54,116 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    color: #d0cfd4;
+    position:relative;
 
 }
+
+.menu-bell-icon, .menu-chevron-icon{
+    color: #d0cfd4;
+}
+
+.profileIcon{
+    width:40px;
+    height:40px;
+    position: relative;
+    text-align: center;
+    
+}
+
+.profileIcon::before{
+    position: absolute;
+    content:'';
+    top:2px;
+    right:10px;
+    width:8px;
+    height:8px;
+    background: red;
+    border-radius: 50%;
+}
+
+.profileImage{
+    margin: 0px 10px;  
+    overflow:hidden;
+}
+
+.profileName{
+    font-weight:500;
+    font-size:12px;
+}
+
+
+.menu-chevron-icon{
+    transform: rotate(180deg);
+}
+
+.menu-chevron-icon:hover{
+    transition: transform 0.3s ease;
+}
+
+.menuContainer{
+    position:absolute;
+    right:10px;
+    top:50px;
+    background: #19162c;
+    border-radius: 0.5em;
+    width:180px;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+    z-index:1;    
+    transform: translate(300px);
+    transition:0.3s cubic-bezier(.18,.49,0,.88);
+}
+
+.menuContainer::after{
+    position:absolute;
+    content:"";
+    width:10px;
+    height:10px;
+    top:0px;
+    right:15px;
+    transform: translate(0px);
+}
+
+.menuContainer > ul {
+    width:100%;
+    height:100%;
+    cursor:pointer;
+}
+
+.menuContainer > ul > li {
+    list-style:none;
+    margin:5px 0px;
+    width:100%;
+    padding: 10px 20px;
+    color:#757380;
+    text-align:left;
+}
+
+.menuContainer > ul > li:hover {
+    background:#121026;
+    color:white;
+    transition:0.3s;
+
+}
+
+@media screen and (max-width: 525px){
+    .container{
+        width: calc (100% - 68px);
+    }
+
+    .inputBox {
+        width:120px;
+        z-index:101;
+    
+    }
+
+    .inputBox input:focus{
+        width:320px;
+        transition: width 0.3s;
+    }
+
+    .profileName{
+        display:none;
+    }
+}
+
